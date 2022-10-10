@@ -61,7 +61,7 @@ public class App {
       Equal();
     }
     mhs.setDataMhs(nama, nim, nilai, grade, status);
-    System.out.println("Jumlah mahasiswa : " + n);
+    System.out.println("Jumlah Mahasiswa : " + n);
     mhs.jmlLulus(status, true);
     mhs.jmlLulus(status, false);
     mhs.jmlnilai(grade, nama, 'A');

@@ -43,7 +43,7 @@ public class Mahasiswa {
             }
         }
         if(b != 0){
-            System.out.printf("Jumlah mahasiswa yang %s : %d", c, b);
+            System.out.printf("Jumlah Mahasiswa yang %s : %d", c, b);
             mhsLulus(getStatus(), getNama(), a);
         }
     }
@@ -69,7 +69,7 @@ public class Mahasiswa {
             }
         }
         if(b != 0){
-            System.out.printf("Jumlah mahasiswa dengan nilai %c : %d", a, b);
+            System.out.printf("Jumlah Mahasiswa dengan nilai %c : %d", a, b);
             mhsNilai(getGrade(), getNama(), a);
         }
     }
