@@ -28,7 +28,7 @@ public class App {
     }
   }
   public static void Equal(){
-    for(int i = 0; i < 40; i++){
+    for(int i = 0; i < 50; i++){
         System.out.print("=");
     }
     System.out.print("\n");

@@ -29,9 +29,6 @@ public class Mahasiswa {
     public boolean[] getStatus(){
         return status;
     }
-    public int jmlMhs(String[] nama){
-        return nama.length;
-    }
     public void jmlLulus(boolean[] status, boolean a){
         int b = 0;
         String c = "";
@@ -97,7 +94,7 @@ public class Mahasiswa {
         for(int i = 0; i < nilai.length; i++){
             System.out.print(nilai[i]);
             a += nilai[i];
-            if(i != nilai.length - 1){
+            if(i != b - 1){
                 System.out.print("+");
             }
         }
