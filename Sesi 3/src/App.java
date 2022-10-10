@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class App {
 
-  public static char grade(int a) {
+  public static char Grade(int a) {
     if (a >= 0 && a < 50) {
       System.out.println("Grade : E");
       return 'E';
@@ -16,11 +16,11 @@ public class App {
       System.out.println("Grade : B");
       return 'B';
     } else {
-      System.out.println("Grade: A");
+      System.out.println("Grade : A");
       return 'A';
     }
   }
-  public static boolean status(char a){
+  public static boolean Status(char a){
     if(a == 'D' || a == 'E'){
         return false;
     }else{
@@ -55,8 +55,8 @@ public class App {
         System.out.print("Nilai : ");
         nilai[i] = input.nextInt();
       }
-      grade[i] = grade(nilai[i]);
-      status[i] = status(grade[i]);
+      grade[i] = Grade(nilai[i]);
+      status[i] = Status(grade[i]);
       input.nextLine();
       Equal();
     }
@@ -64,11 +64,11 @@ public class App {
     System.out.println("Jumlah Mahasiswa : " + n);
     mhs.jmlLulus(status, true);
     mhs.jmlLulus(status, false);
-    mhs.jmlnilai(grade, nama, 'A');
-    mhs.jmlnilai(grade, nama, 'B');
-    mhs.jmlnilai(grade, nama, 'C');
-    mhs.jmlnilai(grade, nama, 'D');
-    mhs.jmlnilai(grade, nama, 'E');
+    mhs.jmlNilai(grade, nama, 'A');
+    mhs.jmlNilai(grade, nama, 'B');
+    mhs.jmlNilai(grade, nama, 'C');
+    mhs.jmlNilai(grade, nama, 'D');
+    mhs.jmlNilai(grade, nama, 'E');
     mhs.rataMhs(nilai);
     input.close();
   }

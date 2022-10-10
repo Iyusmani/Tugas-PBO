@@ -61,7 +61,7 @@ public class Mahasiswa {
         }
         System.out.print("\n");
     }
-    public void jmlnilai(char[] grade, String[] nama, char a){
+    public void jmlNilai(char[] grade, String[] nama, char a){
         int b = 0;
         for(int i = 0; i < grade.length; i++){
             if(grade[i] == a){
