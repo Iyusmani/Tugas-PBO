@@ -19,59 +19,47 @@ public class Mahasiswa {
   }
 
   public void jmlMhs(String a) {
-    int b = 0;
+    int b = 0, c = 0;
     for (int i = 0; i < status.length; i++) {
       if (status[i] == a) {
         b++;
       }
     }
     if (b != 0) {
-      System.out.printf("Jumlah Mahasiswa yang %s : %d", a, b);
-      tampilNama(a);
+      System.out.printf("Jumlah Mahasiswa yang %s : %d yaitu ", a, b);
+      for (int i = 0; i < status.length; i++) {
+        if (status[i] == a) {
+          c++;
+          if (c >= 2) {
+            System.out.print(", ");
+          }
+          System.out.print(nama[i]);
+        }
+      }
+      System.out.print("\n");
     }
   }
 
   public void jmlMhs(char a) {
-    int b = 0;
+    int b = 0, c = 0;
     for (int i = 0; i < grade.length; i++) {
       if (grade[i] == a) {
         b++;
       }
     }
     if (b != 0) {
-      System.out.printf("Jumlah Mahasiswa dengan nilai %c : %d", a, b);
-      tampilNama(a);
-    }
-  }
-
-  public void tampilNama(String a) {
-    System.out.print(" yaitu ");
-    int b = 0;
-    for (int i = 0; i < status.length; i++) {
-      if (status[i] == a) {
-        b++;
-        if (b >= 2) {
-          System.out.print(", ");
+      System.out.printf("Jumlah Mahasiswa dengan nilai %c : %d yaitu ", a, b);
+      for (int i = 0; i < grade.length; i++) {
+        if (grade[i] == a) {
+          c++;
+          if (c >= 2) {
+            System.out.print(", ");
+          }
+          System.out.print(nama[i]);
         }
-        System.out.print(nama[i]);
       }
+      System.out.print("\n");
     }
-    System.out.print("\n");
-  }
-
-  public void tampilNama(char a) {
-    System.out.print(" yaitu ");
-    int b = 0;
-    for (int i = 0; i < grade.length; i++) {
-      if (grade[i] == a) {
-        b++;
-        if (b >= 2) {
-          System.out.print(", ");
-        }
-        System.out.print(nama[i]);
-      }
-    }
-    System.out.print("\n");
   }
 
   public void rataMhs() {
