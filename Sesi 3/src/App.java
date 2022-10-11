@@ -20,16 +20,18 @@ public class App {
       return 'A';
     }
   }
-  public static boolean Status(char a){
-    if(a == 'D' || a == 'E'){
-        return false;
-    }else{
-        return true;
+
+  public static boolean Status(char a) {
+    if (a == 'D' || a == 'E') {
+      return false;
+    } else {
+      return true;
     }
   }
-  public static void Equal(){
-    for(int i = 0; i < 50; i++){
-        System.out.print("=");
+
+  public static void Equal() {
+    for (int i = 0; i < 50; i++) {
+      System.out.print("=");
     }
     System.out.print("\n");
   }

@@ -1,88 +1,101 @@
 public class Mahasiswa {
-    private String[] nama, nim;
-    private char[] grade;
-    private boolean[] status;
-    private int[] nilai;
-    public void setDataMhs(String[] nama, String[] nim, int[] nilai, char[] grade, boolean[] status){
-        this.nama = nama;
-        this.nim = nim;
-        this.nilai = nilai;
-        this.grade = grade;
-        this.status = status;
-        nama = nim = null;
-        grade = null;
-        nilai = null;
-        status = null;
+
+  private String[] nama, nim;
+  private char[] grade;
+  private boolean[] status;
+  private int[] nilai;
+
+  public void setDataMhs(
+    String[] nama,
+    String[] nim,
+    int[] nilai,
+    char[] grade,
+    boolean[] status
+  ) {
+    this.nama = nama;
+    this.nim = nim;
+    this.nilai = nilai;
+    this.grade = grade;
+    this.status = status;
+    nama = nim = null;
+    grade = null;
+    nilai = null;
+    status = null;
+  }
+
+  public void jmlMhs(boolean a) {
+    int b = 0;
+    String c = "";
+    if (a) {
+      c = "Lulus";
+    } else {
+      c = "Tidak Lulus";
     }
-    public void jmlMhs(boolean a){
-        int b = 0;
-        String c = "";
-        if(a){
-            c = "Lulus";
-        }else{
-            c = "Tidak Lulus";
-        }
-        for(int i = 0; i < status.length; i++){
-            if(status[i] == a){
-                b++;
-            }
-        }
-        if(b != 0){
-            System.out.printf("Jumlah Mahasiswa yang %s : %d", c, b);
-            mhsLulus(a);
-        }
+    for (int i = 0; i < status.length; i++) {
+      if (status[i] == a) {
+        b++;
+      }
     }
-    public void mhsLulus(boolean a){
-        System.out.print(" yaitu ");
-        int b = 0;
-        for(int i = 0; i < status.length; i++){
-            if(status[i] == a){
-                b++;
-                if(b >= 2){
-                    System.out.print(", ");
-                }
-                System.out.print(nama[i]);
-            }
-        }
-        System.out.print("\n");
+    if (b != 0) {
+      System.out.printf("Jumlah Mahasiswa yang %s : %d", c, b);
+      tampilNama(a);
     }
-    public void jmlMhs(char a){
-        int b = 0;
-        for(int i = 0; i < grade.length; i++){
-            if(grade[i] == a){
-                b++;
-            }
+  }
+
+  public void tampilNama(boolean a) {
+    System.out.print(" yaitu ");
+    int b = 0;
+    for (int i = 0; i < status.length; i++) {
+      if (status[i] == a) {
+        b++;
+        if (b >= 2) {
+          System.out.print(", ");
         }
-        if(b != 0){
-            System.out.printf("Jumlah Mahasiswa dengan nilai %c : %d", a, b);
-            mhsNilai(a);
-        }
+        System.out.print(nama[i]);
+      }
     }
-    public void mhsNilai(char a){
-        System.out.print(" yaitu ");
-        int b = 0;
-        for(int i = 0; i < grade.length; i++){
-            if(grade[i] == a){
-                b++;
-                if(b >= 2){
-                    System.out.print(", ");
-                }
-                System.out.print(nama[i]);
-            }
-        }
-        System.out.print("\n");
+    System.out.print("\n");
+  }
+
+  public void jmlMhs(char a) {
+    int b = 0;
+    for (int i = 0; i < grade.length; i++) {
+      if (grade[i] == a) {
+        b++;
+      }
     }
-    public void rataMhs(){
-        System.out.print("Rata-rata nilai mahasiswa adalah : ");
-        int b = nilai.length;
-        int a = 0;
-        for(int i = 0; i < nilai.length; i++){
-            System.out.print(nilai[i]);
-            a += nilai[i];
-            if(i != b - 1){
-                System.out.print("+");
-            }
-        }
-        System.out.printf(" / %d = %.2f", b, (float) a / b);
+    if (b != 0) {
+      System.out.printf("Jumlah Mahasiswa dengan nilai %c : %d", a, b);
+      tampilNama(a);
     }
+  }
+
+  public void tampilNama(char a) {
+    System.out.print(" yaitu ");
+    int b = 0;
+    for (int i = 0; i < grade.length; i++) {
+      if (grade[i] == a) {
+        b++;
+        if (b >= 2) {
+          System.out.print(", ");
+        }
+        System.out.print(nama[i]);
+      }
+    }
+    System.out.print("\n");
+  }
+
+  public void rataMhs() {
+    System.out.print("Rata-rata nilai mahasiswa adalah : ");
+    int b = nilai.length;
+    int a = 0;
+    for (int i = 0; i < nilai.length; i++) {
+      System.out.print(nilai[i]);
+      a += nilai[i];
+      if (i != b - 1) {
+        System.out.print("+");
+      }
+    }
+    System.out.printf(" / %d = %.2f", b, (float) a / b);
+  }
 }
