@@ -1,8 +1,7 @@
 public class Mahasiswa {
 
-  private String[] nama, nim;
+  private String[] nama, nim, status;
   private char[] grade;
-  private boolean[] status;
   private int[] nilai;
 
   public void setDataMhs(
@@ -10,34 +9,27 @@ public class Mahasiswa {
     String[] nim,
     int[] nilai,
     char[] grade,
-    boolean[] status
+    String[] status
   ) {
     this.nama = nama;
     this.nim = nim;
     this.nilai = nilai;
     this.grade = grade;
     this.status = status;
-    nama = nim = null;
+    nama = nim = status = null;
     grade = null;
     nilai = null;
-    status = null;
   }
 
-  public void jmlMhs(boolean a) {
+  public void jmlMhs(String a) {
     int b = 0;
-    String c = "";
-    if (a) {
-      c = "Lulus";
-    } else {
-      c = "Tidak Lulus";
-    }
     for (int i = 0; i < status.length; i++) {
       if (status[i] == a) {
         b++;
       }
     }
     if (b != 0) {
-      System.out.printf("Jumlah Mahasiswa yang %s : %d", c, b);
+      System.out.printf("Jumlah Mahasiswa yang %s : %d", a, b);
       tampilNama(a);
     }
   }
@@ -55,7 +47,7 @@ public class Mahasiswa {
     }
   }
 
-  public void tampilNama(boolean a) {
+  public void tampilNama(String a) {
     System.out.print(" yaitu ");
     int b = 0;
     for (int i = 0; i < status.length; i++) {

@@ -21,11 +21,11 @@ public class App {
     }
   }
 
-  public static boolean Status(char a) {
+  public static String Status(char a) {
     if (a == 'D' || a == 'E') {
-      return false;
+      return "Tidak Lulus";
     } else {
-      return true;
+      return "Lulus";
     }
   }
 
@@ -41,7 +41,7 @@ public class App {
     Mahasiswa mhs = new Mahasiswa();
     int n = 4;
     String[] nama = new String[n];
-    boolean[] status = new boolean[n];
+    String[] status = new String[n];
     char[] grade = new char[n];
     String[] nim = new String[n];
     int[] nilai = new int[n];
@@ -64,8 +64,8 @@ public class App {
     }
     mhs.setDataMhs(nama, nim, nilai, grade, status);
     System.out.println("Jumlah Mahasiswa : " + n);
-    mhs.jmlMhs(true);
-    mhs.jmlMhs(false);
+    mhs.jmlMhs("Lulus");
+    mhs.jmlMhs("Tidak Lulus");
     mhs.jmlMhs('A');
     mhs.jmlMhs('B');
     mhs.jmlMhs('C');
