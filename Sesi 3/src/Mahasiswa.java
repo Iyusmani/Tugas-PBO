@@ -16,9 +16,6 @@ public class Mahasiswa {
     this.nilai = nilai;
     this.grade = grade;
     this.status = status;
-    nama = nim = status = null;
-    grade = null;
-    nilai = null;
   }
 
   public void jmlMhs(String a) {
