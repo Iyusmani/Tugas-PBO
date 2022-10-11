@@ -42,6 +42,19 @@ public class Mahasiswa {
     }
   }
 
+  public void jmlMhs(char a) {
+    int b = 0;
+    for (int i = 0; i < grade.length; i++) {
+      if (grade[i] == a) {
+        b++;
+      }
+    }
+    if (b != 0) {
+      System.out.printf("Jumlah Mahasiswa dengan nilai %c : %d", a, b);
+      tampilNama(a);
+    }
+  }
+
   public void tampilNama(boolean a) {
     System.out.print(" yaitu ");
     int b = 0;
@@ -55,19 +68,6 @@ public class Mahasiswa {
       }
     }
     System.out.print("\n");
-  }
-
-  public void jmlMhs(char a) {
-    int b = 0;
-    for (int i = 0; i < grade.length; i++) {
-      if (grade[i] == a) {
-        b++;
-      }
-    }
-    if (b != 0) {
-      System.out.printf("Jumlah Mahasiswa dengan nilai %c : %d", a, b);
-      tampilNama(a);
-    }
   }
 
   public void tampilNama(char a) {
