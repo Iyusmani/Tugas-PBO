@@ -14,22 +14,7 @@ public class Mahasiswa {
         nilai = null;
         status = null;
     }
-    public String[] getNama(){
-        return nama;
-    }
-    public String[] getNim(){
-        return nim;
-    }
-    public int[] getNilai(){
-        return nilai;
-    }
-    public char[] getGrade(){
-        return grade;
-    }
-    public boolean[] getStatus(){
-        return status;
-    }
-    public void jmlLulus(boolean[] status, boolean a){
+    public void jmlMhs(boolean a){
         int b = 0;
         String c = "";
         if(a){
@@ -44,10 +29,10 @@ public class Mahasiswa {
         }
         if(b != 0){
             System.out.printf("Jumlah Mahasiswa yang %s : %d", c, b);
-            mhsLulus(getStatus(), getNama(), a);
+            mhsLulus(a);
         }
     }
-    public void mhsLulus(boolean[] status, String[] nama, boolean a){
+    public void mhsLulus(boolean a){
         System.out.print(" yaitu ");
         int b = 0;
         for(int i = 0; i < status.length; i++){
@@ -61,7 +46,7 @@ public class Mahasiswa {
         }
         System.out.print("\n");
     }
-    public void jmlNilai(char[] grade, String[] nama, char a){
+    public void jmlMhs(char a){
         int b = 0;
         for(int i = 0; i < grade.length; i++){
             if(grade[i] == a){
@@ -70,10 +55,10 @@ public class Mahasiswa {
         }
         if(b != 0){
             System.out.printf("Jumlah Mahasiswa dengan nilai %c : %d", a, b);
-            mhsNilai(getGrade(), getNama(), a);
+            mhsNilai(a);
         }
     }
-    public void mhsNilai(char[] grade, String[] nama, char a){
+    public void mhsNilai(char a){
         System.out.print(" yaitu ");
         int b = 0;
         for(int i = 0; i < grade.length; i++){
@@ -87,7 +72,7 @@ public class Mahasiswa {
         }
         System.out.print("\n");
     }
-    public void rataMhs(int[] nilai){
+    public void rataMhs(){
         System.out.print("Rata-rata nilai mahasiswa adalah : ");
         int b = nilai.length;
         int a = 0;

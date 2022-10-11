@@ -62,14 +62,14 @@ public class App {
     }
     mhs.setDataMhs(nama, nim, nilai, grade, status);
     System.out.println("Jumlah Mahasiswa : " + n);
-    mhs.jmlLulus(status, true);
-    mhs.jmlLulus(status, false);
-    mhs.jmlNilai(grade, nama, 'A');
-    mhs.jmlNilai(grade, nama, 'B');
-    mhs.jmlNilai(grade, nama, 'C');
-    mhs.jmlNilai(grade, nama, 'D');
-    mhs.jmlNilai(grade, nama, 'E');
-    mhs.rataMhs(nilai);
+    mhs.jmlMhs(true);
+    mhs.jmlMhs(false);
+    mhs.jmlMhs('A');
+    mhs.jmlMhs('B');
+    mhs.jmlMhs('C');
+    mhs.jmlMhs('D');
+    mhs.jmlMhs('E');
+    mhs.rataMhs();
     input.close();
   }
 }
