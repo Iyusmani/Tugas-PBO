@@ -29,7 +29,7 @@ public class App {
     }
   }
 
-  public static void Equal() {
+  public static void Equals() {
     for (int i = 0; i < 50; i++) {
       System.out.print("=");
     }
@@ -53,14 +53,14 @@ public class App {
       System.out.print("Nilai : ");
       nilai[i] = input.nextInt();
       while (nilai[i] < 0 || nilai[i] > 100) {
-        System.out.println("Inputan anda salah!");
+        System.out.println("Input nilai anda salah");
         System.out.print("Nilai : ");
         nilai[i] = input.nextInt();
       }
       grade[i] = Grade(nilai[i]);
       status[i] = Status(grade[i]);
       input.nextLine();
-      Equal();
+      Equals();
     }
     mhs.setDataMhs(nama, nim, nilai, grade, status);
     System.out.println("Jumlah Mahasiswa : " + n);
