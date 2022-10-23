@@ -1,5 +1,4 @@
 class Mahasiswa {
-
     private String[] nama, status;
     private char[] grade;
 
