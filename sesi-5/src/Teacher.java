@@ -23,9 +23,9 @@ final class Teacher extends Person {
     }
     protected boolean addCourse(String course){
         boolean status = false;
-        if(!cekCourse(course) && numCourse < 20){
-            this.numCourse += 1;
-            this.courses[this.numCourse - 1] = course;
+        if(!cekCourse(course) && numCourse < 8){
+            this.courses[this.numCourse] = course;
+            this.numCourse++;
             status = true;
         }
         return status;
@@ -42,7 +42,7 @@ final class Teacher extends Person {
             for(int i = a; i < this.numCourse - 1; i++){
                 this.courses[i] = this.courses[i+1];
             }
-            this.numCourse -= 1;
+            this.numCourse--;
             status = true;
         }
         return status;

@@ -18,6 +18,6 @@ public class Person {
         this.address = address;
     }
     public String toString() {
-        return "Nama : " + getName() + "\nAddress : " + getAddress();
+        return "Nama : " + getName() + "\nAlamat : " + getAddress();
     }
 }

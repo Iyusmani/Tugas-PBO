@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Student extends Person {
+final class Student extends Person {
     private String[] courses = new String[10];
     private int[] grade = new int[10];
     private int numCourse = 0;
@@ -20,9 +20,9 @@ public class Student extends Person {
                 }
             }
             if (!status) {
-                this.numCourse += 1;
-                this.courses[this.numCourse - 1] = course;
-                this.grade[this.numCourse - 1] = grade;
+                this.courses[this.numCourse] = course;
+                this.grade[this.numCourse] = grade;
+                this.numCourse++;
             }
         } else {
             System.out.println("Gagal menambahkan!");
