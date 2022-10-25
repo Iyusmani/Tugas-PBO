@@ -36,7 +36,7 @@ public class App {
                                     System.out.print("Masukkan nilai : ");
                                     grade = input.nextInt();
                                     student.addCourseGrade(course, grade);
-                                    break;
+                                    break; 
                                 case 2:
                                     student.printGrades();
                                     break;
@@ -52,7 +52,7 @@ public class App {
                                 default:
                                     System.out.println("Menu tidak tersedia!");
                             }
-                            if (a == 4) {
+                            if(a == 5){
                                 break;
                             }
                         }
@@ -94,7 +94,7 @@ public class App {
                                 default:
                                     System.out.println("Menu tidak tersedia!");
                             }
-                            if (a == 3) {
+                            if (a == 4) {
                                 break;
                             }
                         }
