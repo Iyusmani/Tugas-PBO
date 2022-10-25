@@ -31,9 +31,9 @@ final class Student extends Person {
 
     protected void printGrades() {
         if (numCourse > 0) {
-            System.out.println("Print Grades : ");
+            System.out.print("Print Grades : ");
             for (int i = 0; i < this.numCourse; i++) {
-                System.out.println(this.courses[i] + ":" + this.grade[i] + " ");
+                System.out.print(this.courses[i] + ":" + this.grade[i] + " ");
             }
             System.out.print("\n");
         } else {
