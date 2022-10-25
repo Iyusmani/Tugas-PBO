@@ -25,7 +25,8 @@ public class App {
                             System.out.println("1. Add Course Grade");
                             System.out.println("2. Print Grades");
                             System.out.println("3. Get Average Grade");
-                            System.out.println("4. Exit");
+                            System.out.println("4. toString");
+                            System.out.println("5. Exit");
                             System.out.print("Pilih menu : ");
                             a = input.nextInt();
                             switch (a) {
@@ -43,6 +44,9 @@ public class App {
                                     System.out.println("Nilai rata-rata : " + student.getAverageGrade());
                                     break;
                                 case 4:
+                                    System.out.println(student.toString());
+                                    break;
+                                case 5:
                                     System.out.println("Keluar dari menu student");
                                     break;
                                 default:
@@ -66,7 +70,8 @@ public class App {
                             System.out.println("Menu : ");
                             System.out.println("1. Add Course");
                             System.out.println("2. Remove Course");
-                            System.out.println("3. Exit");
+                            System.out.println("3. toString");
+                            System.out.println("4. Exit");
                             System.out.print("Pilih menu : ");
                             a = input.nextInt();
                             switch (a) {
@@ -81,6 +86,9 @@ public class App {
                                     System.out.println(teacher.removeCourse(course));
                                     break;
                                 case 3:
+                                    System.out.println(teacher.toString());
+                                    break;
+                                case 4:
                                     System.out.println("Keluar dari menu teacher");
                                     break;
                                 default:
