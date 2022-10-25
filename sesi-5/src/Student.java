@@ -22,7 +22,7 @@ final class Student extends Person {
             if (!status) {
                 this.courses[this.numCourse] = course;
                 this.grade[this.numCourse] = grade;
-                this.numCourse++;
+                ++this.numCourse;
             }
         } else {
             System.out.println("Gagal menambahkan!");
