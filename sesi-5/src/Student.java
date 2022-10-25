@@ -43,14 +43,10 @@ final class Student extends Person {
 
     protected double getAverageGrade() {
         double average = 0;
-        if (this.numCourse != 0) {
-            for (int i = 0; i < this.numCourse; i++) {
-                average += this.grade[i];
-            }
-            return average / this.numCourse;
-        } else {
-            return 0;
+        for(int i = 0; i < this.numCourse; i++){
+            average += this.grade[i];
         }
+        return average/this.numCourse;
     }
 
     public String toString() {
