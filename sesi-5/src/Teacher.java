@@ -8,7 +8,7 @@ final class Teacher extends Person {
         super(name, address);
     }
 
-    protected boolean cekCourse(String course) {
+    private boolean cekCourse(String course) {
         boolean status = false;
         for (int i = 0; i < this.numCourse; i++) {
             if (this.courses[i].equals(course)) {

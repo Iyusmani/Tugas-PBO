@@ -12,12 +12,13 @@ public class App {
                 System.out.println("3. Exit");
                 System.out.print("Pilih menu : ");
                 a = input.nextInt();
+                input.nextLine();
                 switch (a) {
                     case 1:
                         System.out.print("Masukkan nama : ");
-                        name = input.next();
+                        name = input.nextLine();
                         System.out.print("Masukkan alamat : ");
-                        address = input.next();
+                        address = input.nextLine();
                         Student student = new Student(name, address);
                         while (true) {
                             System.out.println("Menu : ");
@@ -28,12 +29,14 @@ public class App {
                             System.out.println("5. Exit");
                             System.out.print("Pilih menu : ");
                             a = input.nextInt();
+                            input.nextLine();
                             switch (a) {
                                 case 1:
                                     System.out.print("Masukkan mata pelajaran : ");
-                                    course = input.next();
+                                    course = input.nextLine();
                                     System.out.print("Masukkan nilai : ");
                                     grade = input.nextInt();
+                                    input.nextLine();
                                     student.addCourseGrade(course, grade);
                                     break;
                                 case 2:
@@ -58,9 +61,9 @@ public class App {
                         break;
                     case 2:
                         System.out.print("Masukkan nama : ");
-                        name = input.next();
+                        name = input.nextLine();
                         System.out.print("Masukkan alamat : ");
-                        address = input.next();
+                        address = input.nextLine();
                         Teacher teacher = new Teacher(name, address);
                         while (true) {
                             System.out.println("Menu : ");
@@ -70,15 +73,16 @@ public class App {
                             System.out.println("4. Exit");
                             System.out.print("Pilih menu : ");
                             a = input.nextInt();
+                            input.nextLine();
                             switch (a) {
                                 case 1:
                                     System.out.print("Masukkan mata pelajaran : ");
-                                    course = input.next();
+                                    course = input.nextLine();
                                     System.out.println(teacher.addCourse(course));
                                     break;
                                 case 2:
                                     System.out.print("Masukan mata pelajaran : ");
-                                    course = input.next();
+                                    course = input.nextLine();
                                     System.out.println(teacher.removeCourse(course));
                                     break;
                                 case 3:
