@@ -10,7 +10,7 @@ public class Bola implements BangunRuang {
 
     @Override
     public void calcVolume() {
-        volume = 4 * Math.PI * Math.pow(jariJari, 3) / 3;
+        volume = (4.0 / 3.0) * Math.PI * Math.pow(jariJari, 3);
     }
 
     @Override

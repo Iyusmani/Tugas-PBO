@@ -55,11 +55,11 @@ public class App{
                             case 1:
                                 System.out.print("Masukkan alas : ");
                                 double alas = input.nextDouble();
+                                System.out.print("Masukkan tinggi alas : ");
+                                double tinggiAlas = input.nextDouble();
                                 System.out.print("Masukkan tinggi : ");
                                 double tinggi1 = input.nextDouble();
-                                System.out.print("Masukkan tinggi prisma : ");
-                                double tinggiPrisma = input.nextDouble();
-                                PrismaSegitiga prismaSegitiga = new PrismaSegitiga(alas, tinggi1, tinggiPrisma);
+                                PrismaSegitiga prismaSegitiga = new PrismaSegitiga(alas, tinggiAlas, tinggi1);
                                 prismaSegitiga.calcVolume();
                                 prismaSegitiga.calcLuasPermukaan();
                                 System.out.println("Volume : " + prismaSegitiga.getVolume());
@@ -67,12 +67,12 @@ public class App{
                                 break;
                             case 2:
                                 System.out.print("Masukkan panjang : ");
-                                double panjang1 = input.nextDouble();
+                                double panjangPrisma = input.nextDouble();
                                 System.out.print("Masukkan lebar : ");
-                                double lebar1 = input.nextDouble();
-                                System.out.print("Masukkan tinggi prisma : ");
-                                double tinggiPrisma1 = input.nextDouble();
-                                PrismaSegiEmpat prismaSegiEmpat = new PrismaSegiEmpat(panjang1, lebar1, tinggiPrisma1);
+                                double lebarPrisma = input.nextDouble();
+                                System.out.print("Masukkan tinggi : ");
+                                double tinggiPrisma = input.nextDouble();
+                                PrismaSegiEmpat prismaSegiEmpat = new PrismaSegiEmpat(panjangPrisma, lebarPrisma, tinggiPrisma);
                                 prismaSegiEmpat.calcVolume();
                                 prismaSegiEmpat.calcLuasPermukaan();
                                 System.out.println("Volume : " + prismaSegiEmpat.getVolume());
@@ -81,6 +81,7 @@ public class App{
                         }
                         break;
                     case 5:
+                        System.out.println("Program selesai");
                         System.exit(0);
                         break;
                     default:

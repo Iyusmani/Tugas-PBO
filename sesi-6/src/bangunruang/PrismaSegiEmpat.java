@@ -1,23 +1,20 @@
 package bangunruang;
 
-
-public class PrismaSegiEmpat extends Prisma {
-    double panjang, lebar, tinggiPrisma;
-    double volume, luasPermukaan;
-
-    public PrismaSegiEmpat(double panjang, double lebar, double tinggiPrisma) {
-        super(tinggiPrisma);
+public class PrismaSegiEmpat extends Prisma{
+    private double panjang;
+    private double lebar;
+    private double tinggi;
+    public PrismaSegiEmpat(double panjang, double lebar, double tinggi){
         this.panjang = panjang;
         this.lebar = lebar;
+        this.tinggi = tinggi;
     }
-
     @Override
-    public void calcVolume() {
-        volume = panjang * lebar * tinggiPrisma;
+    public double calcVolumePrisma() {
+        return this.panjang * this.lebar * this.tinggi;
     }
-
     @Override
-    public void calcLuasPermukaan() {
-        luasPermukaan = 2 * (panjang * lebar + panjang * tinggiPrisma + lebar * tinggiPrisma);
+    public double calcLuasPermukaanPrisma() {
+        return (2 * this.panjang * this.lebar) + (2 * this.panjang * this.tinggi) + (2 * this.lebar * this.tinggi);
     }
 }
