@@ -1,21 +1,21 @@
 package bangunruang;
 
-public class Kubus implements BangunRuang {
-    double sisi;
+public class Bola implements BangunRuang {
+    double jariJari;
     double volume, luasPermukaan;
 
-    public Kubus(double sisi) {
-        this.sisi = sisi;
+    public Bola(double jariJari) {
+        this.jariJari = jariJari;
     }
 
     @Override
     public void calcVolume() {
-        volume = Math.pow(sisi, 3);
+        volume = 4 * Math.PI * Math.pow(jariJari, 3) / 3;
     }
 
     @Override
     public void calcLuasPermukaan() {
-        luasPermukaan = 6 * Math.pow(sisi, 2);
+        luasPermukaan = 4 * Math.PI * Math.pow(jariJari, 2);
     }
 
     @Override

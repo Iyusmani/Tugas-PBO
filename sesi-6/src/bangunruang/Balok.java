@@ -1,11 +1,8 @@
 package bangunruang;
 
 public class Balok implements BangunRuang {
-    double panjang;
-    double lebar;
-    double tinggi;
-    double volume;
-    double luasPermukaan;
+    double panjang, lebar, tinggi;
+    double volume, luasPermukaan;
 
     public Balok(double panjang, double lebar, double tinggi) {
         this.panjang = panjang;
@@ -15,21 +12,21 @@ public class Balok implements BangunRuang {
 
     @Override
     public void calcVolume() {
-        this.volume = this.panjang * this.lebar * this.tinggi;
+        volume = panjang * lebar * tinggi;
     }
 
     @Override
     public void calcLuasPermukaan() {
-        this.luasPermukaan = 2 * (this.panjang * this.lebar + this.panjang * this.tinggi + this.lebar * this.tinggi);
+        luasPermukaan = 2 * (panjang * lebar + panjang * tinggi + lebar * tinggi);
     }
 
     @Override
     public double getVolume() {
-        return this.volume;
+        return volume;
     }
 
     @Override
     public double getLuasPermukaan() {
-        return this.luasPermukaan;
+        return luasPermukaan;
     }
 }

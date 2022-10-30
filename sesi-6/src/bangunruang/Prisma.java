@@ -1,35 +1,18 @@
 package bangunruang;
 
-public class Prisma implements BangunRuang {
-    double panjang;
-    double lebar;
-    double tinggi;
-    double volume;
-    double luasPermukaan;
+public abstract class Prisma implements BangunRuang {
+    double tinggiPrisma, volume, luasPermukaan;
 
-    public Prisma(double panjang, double lebar, double tinggi) {
-        this.panjang = panjang;
-        this.lebar = lebar;
-        this.tinggi = tinggi;
+    public Prisma(double tinggiPrisma){
+        this.tinggiPrisma = tinggiPrisma;
     }
 
-    @Override
-    public void calcVolume() {
-        this.volume = this.panjang * this.lebar * this.tinggi;
+    public abstract void calcVolume();
+    public abstract void calcLuasPermukaan();
+    public double getVolume(){
+        return volume;
     }
-
-    @Override
-    public void calcLuasPermukaan() {
-        this.luasPermukaan = 2 * (this.panjang * this.lebar + this.panjang * this.tinggi + this.lebar * this.tinggi);
-    }
-
-    @Override
-    public double getVolume() {
-        return this.volume;
-    }
-
-    @Override
-    public double getLuasPermukaan() {
-        return this.luasPermukaan;
+    public double getLuasPermukaan(){
+        return luasPermukaan;
     }
 }
