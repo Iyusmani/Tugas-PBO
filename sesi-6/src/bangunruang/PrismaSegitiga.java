@@ -9,11 +9,11 @@ public class PrismaSegitiga extends Prisma{
         this.tinggi = tinggi;
     }
     @Override
-    public double calcVolumePrisma() {
-        return (this.alas * this.tinggiAlas * this.tinggi) / 2;
+    public void calcVolume() {
+        super.volume = (this.alas * this.tinggiAlas * this.tinggi) / 2;
     }
     @Override
-    public double calcLuasPermukaanPrisma() {
-        return (this.alas * this.tinggiAlas) + (this.alas * this.tinggi) + (this.tinggiAlas * this.tinggi);
+    public void calcLuasPermukaan() {
+        super.luasPermukaan = (this.alas * this.tinggiAlas) + (this.alas * this.tinggi) + (this.tinggiAlas * this.tinggi);
     }
 }
