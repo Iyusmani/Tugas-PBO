@@ -84,7 +84,7 @@ public class App{
                     case 5:
                         System.out.println("Menu : ");
                         System.out.println("1. Cari volume");
-                        System.out.println("2. Cari volume dan luas permukaan");
+                        System.out.println("2. Cari luas permukaan dan volume");
                         System.out.print("Pilih : ");
                         int pilihKerucut = input.nextInt();
                         switch(pilihKerucut){
