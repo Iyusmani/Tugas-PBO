@@ -102,7 +102,7 @@ public class App{
                                 double jariKerucut1 = input.nextDouble();
                                 System.out.print("Masukkan tinggi : ");
                                 double tinggiKerucut1 = input.nextDouble();
-                                System.out.println("Masukan sisi miring : ");
+                                System.out.print("Masukan sisi miring : ");
                                 double sisiMiring = input.nextDouble();
                                 Kerucut kerucut1 = new Kerucut(jariKerucut1, tinggiKerucut1, sisiMiring);
                                 kerucut1.calcVolume();
@@ -111,6 +111,7 @@ public class App{
                                 System.out.println("Luas Permukaan : " + kerucut1.getLuasPermukaan());
                                 break;
                         }
+                        break;
                     case 6:
                         System.out.println("Program selesai");
                         System.exit(0);
