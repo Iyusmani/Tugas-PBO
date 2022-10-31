@@ -1,22 +1,23 @@
 package bangunruang;
 
 public class Bola implements BangunRuang {
-    double jariJari;
+    double jari;
     double volume, luasPermukaan;
 
-    public Bola(double jariJari) {
-        this.jariJari = jariJari;
+    public Bola(double jari) {
+        this.jari = jari;
     }
 
     @Override
     public void calcVolume() {
-        volume = (4.0 / 3.0) * Math.PI * Math.pow(jariJari, 3);
+        volume = (4 * Math.PI * Math.pow(jari, 3)) / 3;
     }
 
     @Override
     public void calcLuasPermukaan() {
-        luasPermukaan = 4 * Math.PI * Math.pow(jariJari, 2);
+        luasPermukaan = 4 * Math.PI * Math.pow(jari, 2);
     }
+
 
     @Override
     public double getVolume() {

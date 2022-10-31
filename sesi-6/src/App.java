@@ -10,7 +10,8 @@ public class App{
                 System.out.println("2. Bola");
                 System.out.println("3. Kubus");
                 System.out.println("4. Prisma");
-                System.out.println("5. Exit");
+                System.out.println("5. Kerucut");
+                System.out.println("6. Exit");
                 System.out.print("Pilih : ");
                 int pilih = input.nextInt();
                 switch(pilih){
@@ -81,6 +82,36 @@ public class App{
                         }
                         break;
                     case 5:
+                        System.out.println("Menu : ");
+                        System.out.println("1. Cari volume");
+                        System.out.println("2. Cari volume dan luas permukaan");
+                        System.out.print("Pilih : ");
+                        int pilihKerucut = input.nextInt();
+                        switch(pilihKerucut){
+                            case 1:
+                                System.out.print("Masukkan jari-jari : ");
+                                double jariKerucut = input.nextDouble();
+                                System.out.print("Masukkan tinggi : ");
+                                double tinggiKerucut = input.nextDouble();
+                                Kerucut kerucut = new Kerucut(jariKerucut, tinggiKerucut);
+                                kerucut.calcVolume();
+                                System.out.println("Volume : " + kerucut.getVolume());
+                                break;
+                            case 2:
+                                System.out.print("Masukkan jari-jari : ");
+                                double jariKerucut1 = input.nextDouble();
+                                System.out.print("Masukkan tinggi : ");
+                                double tinggiKerucut1 = input.nextDouble();
+                                System.out.println("Masukan sisi miring : ");
+                                double sisiMiring = input.nextDouble();
+                                Kerucut kerucut1 = new Kerucut(jariKerucut1, tinggiKerucut1, sisiMiring);
+                                kerucut1.calcVolume();
+                                kerucut1.calcLuasPermukaan();
+                                System.out.println("Volume : " + kerucut1.getVolume());
+                                System.out.println("Luas Permukaan : " + kerucut1.getLuasPermukaan());
+                                break;
+                        }
+                    case 6:
                         System.out.println("Program selesai");
                         System.exit(0);
                         break;
