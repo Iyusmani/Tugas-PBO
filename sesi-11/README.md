@@ -19,11 +19,4 @@ The `JAVA PROJECTS` view allows you to manage your dependencies. More details ca
 
 ## Running Program
 
-![img-1](/img/Screenshot%20(24).png)
-![img-1](/img/Screenshot%20(25).png)
-![img-1](/img/Screenshot%20(26).png)
-![img-1](/img/Screenshot%20(27).png)
-![img-1](/img/Screenshot%20(28).png)
-![img-1](/img/Screenshot%20(29).png)
-![img-1](/img/Screenshot%20(30).png)
-![img-1](/img/Screenshot%20(31).png)
+![img-1](/img/img1.png)
