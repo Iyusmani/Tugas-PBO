@@ -7,8 +7,4 @@ public class Mahasiswa {
         this.jurusan = jurusan;
         this.ttl = ttl;
     }
-
-    public String getNama(){
-        return this.nama;
-    }
 }
