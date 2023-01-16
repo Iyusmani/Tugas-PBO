@@ -1,5 +1,5 @@
 ## Running Program
 
-![](img/1.png)<hr>
-![](img/2.png)<hr>
-![](img/3.png)<hr>
+![](images/1.png)<hr>
+![](images/2.png)<hr>
+![](images/3.png)<hr>
